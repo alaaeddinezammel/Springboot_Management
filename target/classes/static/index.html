@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Home | BGI</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/lightbox.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/style2.css" rel="stylesheet">
+
+<link href="css/angular-ui-tree.min.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	    <script src="js/respond.min.js"></script>
+    <![endif]-->
+<link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="images/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="images/ico/apple-touch-icon-57-precomposed.png">
+
+
+<link href="css/googlefontapis.css" rel="stylesheet">
+</head>
+<!--/head-->
+
+<body ng-app="ngClassifieds">
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 overflow">
+					<div class="social-icons pull-right">
+						<ul class="nav nav-pills">
+							<li><a href=""><i class="fa fa-facebook"></i></a></li>
+							<li><a href=""><i class="fa fa-twitter"></i></a></li>
+							<li><a href=""><i class="fa fa-google-plus"></i></a></li>
+							<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+							<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="navbar navbar-inverse" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" ui-sref="Home">
+						<h1>
+							<img src="images/bgi.jpg" alt="logo">
+						</h1>
+					</a>
+
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a ui-sref="Home">Accueil</a></li>
+
+						</li>
+						<li class=""><a ui-sref="Listlogiciel">Logiciels </a>
+
+							<ul role="menu" class="sub-menu">
+								<li><a ui-sref="Machine&Logiciel">Logiciel Machine</a></li>
+								<li><a ui-sref="Listlogiciel">Logiciels </a></li>
+
+							</ul></li>
+						<li class=""><a ui-sref="Utilisateurs">Utilisateurs </a>
+							<ul role="menu" class="sub-menu">
+								<li><a ui-sref="Machine&User">Utilisateur Machine</a></li>
+								<li><a ui-sref="Utilisateurs">Utilisateurs </a></li>
+
+							</ul></li>
+						<li class=""><a ui-sref="Fournisseurs">Fournisseur </a></li>
+						<li class=""><a ui-sref="listEmplacement">Emplacement </a></li>
+						<li class=""><a>Stock </a>
+
+
+							<ul role="menu" class="sub-menu">
+								<li><a ui-sref="CarteVideo">Carte Video </a></li>
+								<li><a ui-sref="DDUR">Disque Dur</a></li>
+								<li><a ui-sref="Ecran">Ecran</a></li>
+								<li><a ui-sref="garentie">Garentie</a></li>
+								<li><a ui-sref="maintenance">Maintenance</a></li>
+								<li><a ui-sref="marque">Marque</a></li>
+
+
+
+							</ul></li>
+						<li class=""><a ui-sref="listPerepherique">Perepheriques</a>
+
+							<ul role="menu" class="sub-menu">
+								<li><a ui-sref="Machine&Perepherique">Perepheriques
+										Machine</a></li>
+								<li><a ui-sref="listPerepherique">Perepheriques</a></li>
+
+							</ul></li>
+						<li><a ui-sref="Machine">Machines</a></li>
+						<li class=""><a href="/logout">Log Out</a></li>
+
+					</ul>
+
+				</div>
+				<div class="search">
+					<form role="form">
+						<i class="fa fa-search"></i>
+						<div class="field-toggle">
+							<input type="text" class="search-form" autocomplete="off"
+								placeholder="Search">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--/#body-->
+
+
+	<br>
+	<br>
+	<br>
+
+
+
+	<div ui-view></div>
+
+
+
+
+
+
+
+
+	<br>
+	<br>
+	<br>
+	<!--/#body-->
+
+
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center bottom-separator">
+					<img src="images/home/under.png" class="img-responsive inline"
+						alt="">
+				</div>
+
+
+
+				<div class="col-sm-12">
+					<div class="copyright-text text-center">
+						<p>&copy; BGI. Tous Droits Reserves.</p>
+						<p>
+							Creer par <a target="_blank">alaa zammel</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--/#footer-->
+
+	<script type="text/javascript" src="js/libs/jquery.js"></script>
+	<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/libs/lightbox.min.js"></script>
+	<script type="text/javascript" src="js/libs/wow.min.js"></script>
+	<script type="text/javascript" src="js/libs/main.js"></script>
+
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+	<script src="js/libs/angular/angular.js"></script>
+	<script src="js/libs/ui-bootstrap-tpls-2.1.0.min.js"></script>
+
+	<script src="js/libs/jquery1.min.js"></script>
+
+	<script src="js/libs/lodash1.js"></script>
+	<link data-require="bootstrap-css@3.2.0" data-semver="3.2.0"
+		rel="stylesheet" href="js/libs/bootstrap1.min.css" />
+
+	<link
+		href="https://fonts.googleapis.com/css?family=Lato:400,100,700,900"
+		rel="stylesheet" type="text/css">
+
+	<script src="js/libs/bootstrap.min.js"></script>
+
+
+
+	<script src="js/libs/smart-table.debug.js"></script>
+
+	<script src="js/libs/toggle-column.js"></script>
+	<script src="js/libs/smart-table.js"></script>
+
+
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/lodash.js"></script>
+	<script src="js/libs/dirPagination.js"></script>
+	<script src="js/libs/angular-ui-tree.js"></script>
+
+
+	<script src="js/libs/angular-ui-router/release/angular-ui-router.js"></script>
+
+	<script src="js/app.js"></script>
+
+	<!-- //Logiciel sourcees -->
+	<script src="js/controllers/logiciel/classifieds.ctr.js"></script>
+	<script src="js/controllers/logiciel/classifieds.fac.js"></script>
+	<script src="js/controllers/logiciel/new_logiciel/logiciel.new.ctr.js"></script>
+	<script
+		src="js/controllers/logiciel/edit_logiciel/logiciel.edit.ctr.js"></script>
+	<script src="js/controllers/logiciel/ControllerHistorique.ctr.js"></script>
+
+
+
+	<!--     //endlogiciel -->
+
+
+
+	<!--     //start fournissseur -->
+	<script src="js/controllers/Fournisseurs/fournisseurs.ctr.js"></script>
+	<script src="js/controllers/Fournisseurs/fournisseur.fac.js"></script>
+
+	<script
+		src="js/controllers/Fournisseurs/new_fournisseur/fournisseur.new.ctr.js"></script>
+	<script
+		src="js/controllers/Fournisseurs/edit_fournisseur/fournisseur.edit.ctr.js"></script>
+
+	<!--     //endfournisseur -->
+
+
+
+	<!--     //start Emplacement -->
+	<script src="js/controllers/Emplacement/emplacement.ctr.js"></script>
+	<script src="js/controllers/Emplacement/emplacement.fac.js"></script>
+
+	<script
+		src="js/controllers/Emplacement/new_emplacement/emplacement.new.ctr.js"></script>
+	<script
+		src="js/controllers/Emplacement/edit_emplacement/emplacement.edit.ctr.js"></script>
+
+	<!--     //endemplacement -->
+
+
+
+
+
+	<!--     //start Perepherique -->
+	<script src="js/controllers/Perepherique/perepherique.ctr.js"></script>
+	<script src="js/controllers/Perepherique/perepherique.fac.js"></script>
+
+	<script
+		src="js/controllers/Perepherique/new_perepherique/perepherique.new.ctr.js"></script>
+	<script
+		src="js/controllers/Perepherique/edit_perepherique/perepherique.edit.ctr.js"></script>
+
+
+	<script src="js/controllers/Perepherique/ControllerHistoriqueP.ctr.js"></script>
+
+	<!--     //endPerepherique -->
+
+
+	<!--     //start Garentie -->
+
+
+
+	<script src="js/controllers/Garentie/garentie.fac.js"></script>
+	<script src="js/controllers/Garentie/garentie.ctr.js"></script>
+
+	<script src="js/controllers/Garentie/new_garentie/garentie.new.ctr.js"></script>
+
+	<script
+		src="js/controllers/Garentie/edit_garentie/garentie.edit.ctr.js"></script>
+
+
+	<!--     //endGarentie -->
+
+
+
+
+	<!--     //start ddur -->
+
+
+	<script src="js/controllers/DDUR/ddur.ctr.js"></script>
+
+	<script src="js/controllers/DDUR/new_ddur/ddur.new.ctr.js"></script>
+
+	<script src="js/controllers/DDUR/edit_ddur/ddur.edit.ctr.js"></script>
+
+
+	<script src="js/controllers/DDUR/ddur.fac.js"></script>
+
+	<!--     //end -->
+
+	<!--     //start maintenance -->
+
+
+
+	<script src="js/controllers/Maintenance/maintenance.fac.js"></script>
+	<script src="js/controllers/Maintenance/maintenance.ctr.js"></script>
+	<script
+		src="js/controllers/Maintenance/new_maintenance/maintenance.new.ctr.js"></script>
+	<script
+		src="js/controllers/Maintenance/edit_maintenance/maintenance.edit.ctr.js"></script>
+
+
+
+
+	<!--     //end -->
+
+
+	<!--     //start cartevideo -->
+
+	<script src="js/controllers/CarteV/cartV.ctr.js"></script>
+	<script src="js/controllers/CarteV/new_cartV/cartV.new.ctr.js"></script>
+
+	<script src="js/controllers/CarteV/edit_cartV/cartV.edit.ctr.js"></script>
+
+	<script src="js/controllers/CarteV/cartV.fac.js"></script>
+
+	<!--     //end -->
+
+
+
+	<!--     //start marques -->
+
+
+
+	<script src="js/controllers/Marque/marque.fac.js"></script>
+	<script src="js/controllers/Marque/marque.ctr.js"></script>
+	<script src="js/controllers/Marque/new_marque/marque.new.ctr.js"></script>
+	<script src="js/controllers/Marque/edit_marque/marque.edit.ctr.js"></script>
+
+
+
+
+	<!--     //end -->
+
+	<!--     //start eCRAN -->
+
+	<script src="js/controllers/Ecrans/ecran.ctr.js"></script>
+	<script src="js/controllers/Ecrans/new_ecran/ecran.new.ctr.js"></script>
+	<script src="js/controllers/Ecrans/edit_ecran/ecran.edit.ctr.js"></script>
+	<script src="js/controllers/Ecrans/ecran.fac.js"></script>
+
+	<!--     //end -->
+
+
+	<!--     //start MACHINE -->
+	<script src="js/controllers/Machine/edit_machine/machine.edit.ctr.js"></script>
+	<script
+		src="js/controllers/Machine/detail_machine/machine.detail.ctr.js"></script>
+
+	<script src="js/controllers/Machine/new_machine/machine.new.ctr.js"></script>
+	<script src="js/controllers/Machine/machine.ctr.js"></script>
+	<script src="js/controllers/Machine/machine.fac.js"></script>
+	<script src="js/controllers/Machine/machineHistoriqueP.ctr.js"></script>
+
+
+	<script src="js/controllers/logiciel/LogicielMachine.ctr.js"></script>
+
+	<script src="js/controllers/Perepherique/PerepheriqueMachine.ctr.js"></script>
+
+
+	<!--     //end -->
+
+
+
+
+	<!-- //Utilisateur sourcees -->
+	<script src="js/controllers/Utilisateur/utilisateur.ctr.js"></script>
+	<script src="js/controllers/Utilisateur/utilisateur.fac.js"></script>
+	<script
+		src="js/controllers/Utilisateur/new_utilisateur/utilisateur.new.ctr.js"></script>
+	<script
+		src="js/controllers/Utilisateur/edit_utilisateur/utilisateur.edit.ctr.js"></script>
+	<script src="js/controllers/Utilisateur/UserHistorique.ctr.js"></script>
+
+	<script src="js/controllers/Utilisateur/utilisateurMachine.ctr.js"></script>
+
+
+
+
+	<!--     //end -->
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.PUTLogiciel(vm.logiciel)" novalidate>
+
+			<div class="textintro">
+				<h2>Modifier Utilisateur</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Utilisateur</legend>
+
+				
+
+				<label class="col-sm-22 control-label" for="nom Logiciel">
+					username</label> <input type="text" name="username" class="form-group"
+					placeholder="username " ng-model="vm.logiciel.username"
+					ng-required="true" ng-minlength="6" ng-maxlength="16">
+				<p class="error validationerror"
+					ng-show="myform.username.$invalid && myform.username.$touched">
+					Username doit etre entre 6 et 16 caracteres.</p>
+
+				<label class="col-sm-22 control-label" for="nom Logiciel">password
+				</label> <input type="text" name="password" class="form-group"
+					ng-minlength="6" ng-maxlength="16" placeholder="password "
+					ng-model="vm.logiciel.password" ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.password.$invalid && myform.password.$touched">
+					tapper password correctement.</p>
+
+
+
+				<div class="form-group">
+					<label class="col-sm-22 control-label" for="droitU">Droit
+						Utilisateur</label>
+					<div class="col-sm-22">
+						<select ng-required="true" name="droitU" id="droitU"
+							class="form-group" ng-model="vm.logiciel.droitU">
+							<option ng-repeat="typ in vm.droitU" value="{{typ}}">
+								{{typ}}</option>
+						</select>
+					</div>
+
+					<p class="error validationerror"
+						ng-show="myform.droitU.$invalid && myform.droitU.$touched">
+						taper droitU .</p>
+				</div>
+
+
+
+
+			</fieldset>
+
+
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+	</section>
+</div>

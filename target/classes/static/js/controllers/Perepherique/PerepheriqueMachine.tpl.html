@@ -1,0 +1,68 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.postLogiciel(vm.logiciel)"
+			novalidate>
+
+			<div class="textintro">
+				<h2>Nouveau Perepherique</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> List Perepherique</legend>
+
+
+				<div class="form-group">
+
+
+					<label class="control-label" for="GarentieP">Nom
+						Perepherique </label>
+					<div>
+
+
+						<select ng-model="vm.logiciel.obj1"
+							data-ng-options="gara.numMateriel as gara.nomMatriel for gara in vm.classifieds"></select>
+
+					</div>
+
+					<p class="error validationerror"
+						ng-show="myform.GarentieP.$invalid && myform.GarentieP.$touched">
+						taper Perepherique .</p>
+				</div>
+			</fieldset>
+
+
+
+			<fieldset>
+				<legend>List Machine</legend>
+
+
+
+
+				<div class="form-group">
+					<label class="control-label" for="GarentieP"> Nom Machine </label>
+					<div>
+
+
+						<select ng-model="vm.logiciel.obj2"
+							data-ng-options="gara.numMachine as gara.nomMachine for gara in vm.machs"></select>
+
+					</div>
+
+					<p class="error validationerror"
+						ng-show="myform.GarentieP.$invalid && myform.GarentieP.$touched">
+						taper machine a installer avec le perepherique.</p>
+				</div>
+
+
+
+
+			</fieldset>
+
+			<button type="submit" class="btn">Envoyer</button>
+			<div ng-show="vm.submissionSuccess">enregistre avec succes</div>
+		</form>
+
+	</section>
+</div>

@@ -1,0 +1,62 @@
+
+<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'"  type="button" ng-click="vm.addItem()"
+	class="btn btn-sm btn-success">
+	<i class="glyphicon glyphicon-plus"> </i> Ajouter utilisateur
+</button>
+<table st-table="vm.classifieds" class="table table-striped">
+	<thead>
+		<tr>
+			<th st-sort="firstName">Nom</th>
+			<th st-sort="lastName">Prenom</th>
+			<th st-sort="birthDate">DroitU</th>
+		<tr>
+
+			<th colspan="4"><input st-search placeholder="recherche globale"
+				class="input-sm form-control" ng-model="searchName" type="search" />
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr
+			dir-paginate="row in vm.classifieds|filter:searchName|itemsPerPage:5">
+
+			<td>{{row.nomU}}</td>
+			<td>{{row.prenomU}}</td>
+			<td>{{row.droitU}}</td>
+			
+			
+
+			<td>
+
+				<button ng-click="vm.Historique(row)" type="button"
+					class="btn btn-sm btn-info">
+					<i class="glyphicon glyphicon-new-window"> </i> Historique
+				</button>
+			</td>
+
+
+
+
+			<td>
+				<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" ng-click="vm.EditLog(row)" type="button" 
+					class="btn btn-sm btn-primary">
+					<i class="glyphicon glyphicon-edit"> </i> Modifier
+				</button>
+			</td>
+
+
+
+
+			<td>
+				<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" ng-click="vm.deleteLog(row.numU)" type="button"
+					class="btn btn-sm btn-danger">
+					<i class="glyphicon glyphicon-remove-circle"> </i>
+				</button>
+			</td>
+
+
+		</tr>
+	</tbody>
+</table>
+<dir-pagination-controls max-size="5" direction-links="true"
+	boundary-links="true"> </dir-pagination-controls>

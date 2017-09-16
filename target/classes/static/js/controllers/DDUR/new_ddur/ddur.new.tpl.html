@@ -1,0 +1,51 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.postLogiciel(vm.logiciel)"
+			novalidate>
+
+			<div class="textintro">
+				<h2>Nouveau disque dur</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+
+				<label class="control-label" for="marque">Capacite </label> <input
+					type="text" name="capacite" class="form-group"
+					placeholder="capacite" ng-model="vm.logiciel.capacite"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.capacite.$invalid && myform.capacite.$touched">
+					taper capacite disque dur.</p>
+
+				<label class="control-label" for="marque">Type disque dur </label> <input
+					type="text" name="typeDD" class="form-group" placeholder="typeDD"
+					ng-model="vm.logiciel.typeDD" ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.typeDD.$invalid && myform.typeDD.$touched">
+					tapper type disque dur correctement.</p>
+
+
+
+				<label class="control-label" for="marque">Etat disque dur </label> <input
+					type="text" name="etatDD" class="form-group" placeholder="Etat DD"
+					ng-model="vm.logiciel.etatDD" ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.etatDD.$invalid && myform.etatDD.$touched">
+					tapper etat disque correctement.</p>
+
+
+
+			</fieldset>
+
+
+
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+
+	</section>
+</div>

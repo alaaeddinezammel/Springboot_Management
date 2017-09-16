@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>authentication</title>
+
+
+<link type="text/css" rel="stylesheet"
+	href="../static/css/styleLogin.css" th:href="@{css/styleLogin.css}" />
+
+
+<link type="text/css" rel="stylesheet"
+	href="../static/css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+
+
+</head>
+
+<body>
+
+	<div class="container">
+		<section id="content">
+			<form th:action="@{/login}" method="post" name="login">
+				<h1>Authentification</h1>
+
+				
+				<div th:if="${param.logout}" class="alert alert-success">
+					Vous venez de faire une logout.</div>
+
+				<div>
+					<input type="text" placeholder="Username" required="" id="username"
+						name="username" />
+				</div>
+				<div>
+					<input type="password" placeholder="Password" required=""
+						name="password" id="password" />
+				</div>
+				<div class="form-actions">
+					<input type="submit" value="Log in" />
+
+				</div>
+				<br></br>	<br></br>	<br></br>
+				<div th:if="${param.error}" class="errorl">Invalide
+					username ou password.</div>
+			</form>
+			<!-- form -->
+			<div class="button"></div>
+			<!-- button -->
+		</section>
+		<!-- content -->
+	</div>
+	<!-- container -->
+
+
+
+
+	<script src="../static/js/libs/jquery.min.js"
+		th:src="@{js/libs/jquery.min.js}"></script>
+
+	<script
+		src="../static/js/libs/jquery-validation-1.15.0/dist/jquery.validate.min.js"
+		th:src="@{js/libs/jquery-validation-1.15.0/dist/jquery.validate.min.js}"></script>
+
+	<script src="../static/loginJquery/login.js"
+		th:src="@{loginJquery/login.js}"></script>
+
+</body>
+</html>

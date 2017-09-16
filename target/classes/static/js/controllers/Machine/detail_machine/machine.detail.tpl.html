@@ -1,0 +1,77 @@
+
+
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">Detail du machine:</h3>
+	<h5></h5>
+</div>
+<div class="modal-body" id="modal-body">
+
+
+
+
+
+
+
+	<div class="single-price highligh-table">
+		<div class="table-heading">
+			<p class="plan-name">{{vm.logiciel.nomMachine}}</p>
+
+		</div>
+		<ul>
+
+			<li><b>Type machine: </b> {{vm.logiciel.typeMachine}}</li>
+
+			<li><b>Date livraison: </b> {{vm.logiciel.dateLivraison |
+				date:"MM/dd/yyyy 'at' h:mma"}}</li>
+			<li><b>Date Achat: </b> {{vm.logiciel.dateAchat |
+				date:"MM/dd/yyyy 'at' h:mma"}}</li>
+			<li><b>numero serie : </b> {{vm.logiciel.numSerieMachine}}</li>
+
+			<li><b>processeur:</b> {{vm.logiciel.proc}}</li>
+			<li><b>socket:</b> {{vm.logiciel.socket}}</li>
+			<li><b>carte reseaux:</b>{{vm.logiciel.carteReseaux}}</li>
+			<li><b>carte son:</b>{{vm.logiciel.carteSon}}</li>
+			<li><b>carte mere:</b>{{vm.logiciel.carteMere}}</li>
+			<li><b>type carte: </b> {{vm.logiciel.typeCmere}}</li>
+
+			<li><b>adresse IP:</b> {{vm.logiciel.adressIp}}</li>
+			<li><b>adresse MAC:</b>{{vm.logiciel.adressMac}}</li>
+			<li><b>memoire:</b>{{vm.logiciel.memoire}}</li>
+			<li><b>type memoire:</b>{{vm.logiciel.typeMemoire}}</li>
+			<li><b>numero prise murale:</b>{{vm.logiciel.numPriseMurale}}</li>
+			<li><b>note:</b> {{vm.logiciel.notes}} / 20</li>
+
+			<li><b>fournisseur:</b>{{vm.logiciel.fournisseur.nomF}}</li>
+
+			<li><b>type garentie:</b>{{vm.logiciel.garantie.typeGarentie}}</li>
+
+			<li><b>disque dur :</b>{{vm.logiciel.ddur.typeDD}}</li>
+
+			<li><b>carte video:</b>{{vm.logiciel.carteVideo.nomCarte}}</li>
+
+			<li><b>maintenance:</b>{{vm.logiciel.maintenance.commentaire}}</li>
+
+			<li><b>emplacement:</b>{{vm.logiciel.emplacements.nomEmplacement}}</li>
+
+			<li><b>marque:</b>{{vm.logiciel.marque.nomMarque}}</li>
+
+			<li><b>ecran:</b>{{vm.logiciel.ecran.tailleEcran}}<span><i
+					class="fa fa-check"></i></span></li>
+
+
+		</ul>
+
+	</div>
+
+
+
+
+
+	<div class="modal-footer">
+
+		<button class="btn btn-warning" type="button"  ng-click="vm.cancelform()">Fermer</button>
+	</div>
+
+
+
+</div>

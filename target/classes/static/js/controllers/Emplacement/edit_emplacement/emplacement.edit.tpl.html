@@ -1,0 +1,39 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.PUTLogiciel(vm.logiciel)" novalidate>
+
+			<div class="textintro">
+				<h2>Modifier Emplacement</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+
+				<label class="control-label" for="ecran"> nom emplacement </label> <input
+					type="text" name="nomEmplacement" class="form-group"
+					placeholder="nomEmplacement" ng-model="vm.logiciel.nomEmplacement"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.nomEmplacement.$invalid && myform.nomEmplacement.$touched">
+					taper nom Emplacement.</p>
+
+
+				<label class="control-label" for="ecran"> service </label> <input
+					type="text" name="service" class="form-group" placeholder="service"
+					ng-model="vm.logiciel.service" ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.service.$invalid && myform.service.$touched">
+					tapper service correctement.</p>
+
+
+
+			</fieldset>
+
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+	</section>
+</div>

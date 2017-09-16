@@ -1,0 +1,30 @@
+
+
+
+
+
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">Historique du
+		perepherique:</h3>
+	<h5>{{vm.logiciel.nomMatriel}}</h5>
+</div>
+<div class="modal-body" id="modal-body">
+	<ul>
+		<li ng-repeat="item in vm.logiciel.machines"><a href="#"
+			ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{
+				item.nomMachine }}</a>,en {{item.dateperepheriquei| date:"MM/dd/yyyy 
+			"}} <br>
+		<br></li>
+		<br>
+	</ul>
+
+</div>
+<div class="modal-footer">
+
+	<button class="btn btn-warning" type="button" ng-click="vm.cancel()">Sortir</button>
+</div>
+
+
+
+
+

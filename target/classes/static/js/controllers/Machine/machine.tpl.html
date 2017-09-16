@@ -1,0 +1,99 @@
+
+<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" type="button" ng-click="vm.addItem()"
+	class="btn btn-sm btn-success">
+	<i class="glyphicon glyphicon-plus"> </i> ajouter machine 
+</button>
+<table st-table="vm.classifieds" class="table table-striped">
+	<thead>
+		<tr>
+			<th st-sort="firstName">Nom Machine</th>
+			<th st-sort="lastName">Adress IP</th>
+			<th st-sort="birthDate">Date Achat</th>
+			<th st-sort="balance">Date Mise en service</th>
+			<th st-sort="birthDate">Numero serie</th>
+			<th st-sort="balance">Prix Machine</th>
+			<th st-sort="balance">Emplacement</th>
+			<th st-sort="balance">Date Garentie</th>
+			<th st-sort="balance">Marque</th>
+
+		</tr>
+		<tr>
+
+			<th colspan="4"><input st-search placeholder="recherche globale"
+				class="input-sm form-control" ng-model="searchName" type="search" />
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr
+			dir-paginate="row in vm.classifieds|filter:searchName|itemsPerPage:5">
+
+			<td>{{row.nomMachine}}</td>
+
+			<td>{{row.adressIp}}</td>
+
+			<td>{{row.dateAchat| date:"MM/dd/yyyy 'at' h:mma"}}</td>
+
+			<td>{{row.dateMiseEnService| date:"MM/dd/yyyy 'at' h:mma"}}</td>
+
+			<td>{{row.numSerieMachine}}</td>
+
+			<td>{{row.prixMachine}} DT</td>
+
+			<td>{{row.emplacements.nomEmplacement}}</td>
+
+			<td>{{row.garantie.dateDebutGarentie| date:"MM/dd/yyyy 'at'
+				h:mma"}}</td>
+
+			<td>{{row.marque.nomMarque}}</td>
+
+
+
+
+
+
+
+
+			<td>
+				<button ng-click="vm.Details(row)" type="button"
+					class="btn btn-sm btn-info">
+					<i class="glyphicon glyphicon-zoom-in"> </i> Detail
+				</button>
+			</td>
+		<td>
+				
+				<button  ng-click="vm.Historique(row)" type="button" class="btn btn-sm btn-info">
+					<i class="glyphicon glyphicon-new-window">
+					</i> Historique
+				</button>
+				</td>
+
+
+			<td>
+				<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" ng-click="vm.EditLog(row)" type="button"
+					class="btn btn-sm btn-primary">
+					<i class="glyphicon glyphicon-edit"> </i> Modifier
+				</button>
+			</td>
+
+
+
+
+			<td>
+				<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" ng-click="vm.deleteLog(row.numMachine)" type="button"
+					class="btn btn-sm btn-danger">
+					<i class="glyphicon glyphicon-remove-circle"> </i>
+				</button>
+			</td>
+
+
+
+
+
+
+
+		</tr>
+	</tbody>
+</table>
+<dir-pagination-controls max-size="5" direction-links="true"
+	boundary-links="true"> </dir-pagination-controls>

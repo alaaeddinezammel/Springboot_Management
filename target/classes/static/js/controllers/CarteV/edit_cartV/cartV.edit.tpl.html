@@ -1,0 +1,40 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.PUTLogiciel(vm.logiciel)" novalidate>
+
+			<div class="textintro">
+				<h2>Modifier Emplacement</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+
+				<label class="control-label" for="marque">Nom carte </label> <input
+					type="text" name="nomCarte" class="form-group"
+					placeholder="nom Carte Video" ng-model="vm.logiciel.nomCarte"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.nomCarte.$invalid && myform.nomCarte.$touched">
+					taper nom carte video correctement.</p>
+
+				<label class="control-label" for="marque">Type carte </label> <input
+					type="text" name="typeCarte" class="form-group"
+					placeholder="type Carte" ng-model="vm.logiciel.typeCarte"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.service.$invalid && myform.service.$touched">
+					tapper type Carte correctement.</p>
+
+
+
+			</fieldset>
+
+
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+	</section>
+</div>

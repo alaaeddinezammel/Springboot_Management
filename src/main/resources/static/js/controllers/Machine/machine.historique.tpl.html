@@ -1,0 +1,110 @@
+
+
+
+
+
+<div class="modal-header">
+	<h3 class="modal-title" id="modal-title">Historique du machine:</h3>
+
+</div>
+<div class="modal-body" id="modal-body">
+	<h3>
+		<b>List Logiciels</b>
+	</h3>
+	<table class="table">
+		<thead class="thead-inverse">
+			<tr>
+
+				<th><b>Nom logiciel</b></th>
+				<th><b>Date Installation</b></th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in vm.logiciel.logiciels">
+
+				<td>{{ item.nomL }}</td>
+				<td>{{vm.logiciel.datelogicieli| date:"MM/dd/yyyy "}}</td>
+				<td>
+					<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'"
+						class="btn btn-alert" type="button"
+						ng-click="vm.deleteLogH(item.numL)">Delete</button>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+	<br> <br>
+	<h3>
+		<b>List Perepheriques</b>
+	</h3>
+	<br> <br>
+	<table class="table">
+		<thead class="thead-inverse">
+			<tr>
+
+				<th><b>Nom Perepherique</b></th>
+				<th><b>Date Installation</b></th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item2 in vm.logiciel.perepheriques">
+
+				<td>{{ item2.nomMatriel }}</td>
+				<td>{{vm.logiciel.dateperepheriquei| date:"MM/dd/yyyy "}}</td>
+				<td>
+					<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'"
+						class="btn btn-alert" type="button"
+						ng-click="vm.deletePerepheriqueH(item2.numMateriel)">Delete</button>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+	<br> <br>
+	<h3>
+	
+		<b>List Utilisateurs</b>
+	</h3>
+	<br> <br>
+
+	<table class="table">
+		<thead class="thead-inverse">
+			<tr>
+
+				<th><b>Nom Utilisateur</b></th>
+				<th><b>Date Debut Utilisation</b></th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item3 in vm.logiciel.utilisateurs">
+
+				<td>{{ item3.nomU }}</td>
+				<td>{{vm.logiciel.dateUtilisateurMachine| date:"MM/dd/yyyy "}}</td>
+				<td>
+					<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'"
+						class="btn btn-alert" type="button"
+						ng-click="vm.deleteUitlisateurH(item3.numU)">Delete</button>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+
+</div>
+<br>
+<br>
+<div class="modal-footer">
+
+	<button class="btn btn-warning" type="button" ng-click="vm.cancel()">Sortir</button>
+</div>
+
+
+
+
+
+
+

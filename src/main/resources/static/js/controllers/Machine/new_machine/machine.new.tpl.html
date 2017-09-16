@@ -1,0 +1,420 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.postLogiciel(vm.logiciel)"
+			novalidate>
+
+			<div class="textintro">
+				<h2>Nouveau Machine</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+				<div class="row">
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">nom machine </label> <input
+							type="text" name="nomMachine" class="form-group"
+							placeholder="nom machine .." ng-model="vm.logiciel.nomMachine"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.nomMachine.$invalid && myform.nomMachine.$touched">
+							taper nom machine correctement.</p>
+					</div>
+
+
+
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">type machine </label> <input
+							type="text" name="typeMachine" class="form-group"
+							placeholder="type machine " ng-model="vm.logiciel.typeMachine"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.typeMachine.$invalid && myform.typeMachine.$touched">
+							tapper type machine.</p>
+
+					</div>
+					<div class="form-group col-xs-3">
+
+						<label class="control-label" for="ecran">Processeur </label> <input
+							type="text" name="proc" class="form-group" min="0"
+							placeholder="proc" ng-model="vm.logiciel.proc" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.proc.$invalid && myform.procl.$touched">tapper
+							etat correctement.</p>
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">Socket </label> <input
+							type="text" name="socket" class="form-group" min="0"
+							placeholder="socket" ng-model="vm.logiciel.socket"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.socket.$invalid && myform.socket.$touched">tapper
+							socket correctement.</p>
+
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">numero serie</label> <input
+							type="number" name="numSerieMachine" class="form-group" min="0"
+							placeholder=" numSerieMachine eg:9999-999-999 "
+							ng-model="vm.logiciel.numSerieMachine" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.numSerieMachine.$invalid && myform.numSerieMachine.$touched">
+							tapper numSerieMachine correctement.</p>
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">prix machine </label> <input
+							type="text" name="prixMachine" class="form-group"
+							placeholder=" prixMachine eg:9999-999-999 "
+							ng-model="vm.logiciel.prixMachine" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.prixMachine.$invalid && myform.prixMachine.$touched">
+							tapper prix Machine correctement.</p>
+
+
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">memoire </label> <input
+							type="text" name="memoire" class="form-group"
+							placeholder=" memoire eg:9999-999-999 "
+							ng-model="vm.logiciel.memoire" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.memoire.$invalid && myform.memoire.$touched">
+							tapper memoire correctement.</p>
+
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">type memoire </label> <input
+							type="text" name="typeMemoire" class="form-group"
+							placeholder=" typeMemoire eg:9999-999-999 "
+							ng-model="vm.logiciel.typeMemoire" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.typeMemoire.$invalid && myform.typeMemoire.$touched">
+							tapper typeMemoire correctement.</p>
+
+
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran"> Carte reseaux </label> <input
+							type="text" name="carteReseaux" class="form-group"
+							placeholder=" carteReseaux eg:9999-999-999 "
+							ng-model="vm.logiciel.carteReseaux" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.carteReseaux.$invalid && myform.carteReseaux.$touched">
+							tapper carteReseaux correctement.</p>
+
+
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">Carte son </label> <input
+							type="text" name="carteSon" class="form-group"
+							placeholder=" carteSon " ng-model="vm.logiciel.carteSon"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.carteSon.$invalid && myform.carteSon.$touched">
+							tapper carteSon correctement.</p>
+
+					</div>
+					<div class="form-group col-xs-3">
+
+
+
+						<label class="control-label" for="ecran">Carte mere </label> <input
+							type="text" name="carteMere" class="form-group"
+							placeholder=" carteMere  " ng-model="vm.logiciel.carteMere"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.carteMere.$invalid && myform.carteMere.$touched">
+							tapper carteMere correctement.</p>
+
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">type carte mere </label>
+						<input type="text" name="typeCmere" class="form-group"
+							placeholder=" typeCmere  " ng-model="vm.logiciel.typeCmere"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.typeCmere.$invalid && myform.typeCmere.$touched">
+							tapper typeCmere correctement.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">Adresse IP </label> <input
+							type="text" name="adressIp" class="form-group"
+							placeholder=" adressIp  " ng-model="vm.logiciel.adressIp"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.adressIp.$invalid && myform.adressIp.$touched">
+							tapper adressIp correctement.</p>
+
+
+
+
+					</div>
+					<div class="form-group col-xs-3">
+
+						<label class="control-label" for="ecran">Adresse Mac </label> <input
+							type="text" name="adressMac" class="form-group"
+							placeholder=" adressIp  " ng-model="vm.logiciel.adressMac"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.adressMac.$invalid && myform.adressMac.$touched">
+							tapper adressMac correctement.</p>
+
+
+					</div>
+					<div class="form-group col-xs-3">
+
+						<label class="control-label" for="ecran"> numero prise
+							murale </label> <input type="number" name="numPriseMurale"
+							class="form-group" placeholder=" numPriseMurale  "
+							ng-model="vm.logiciel.numPriseMurale" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.numPriseMurale.$invalid && myform.numPriseMurale.$touched">
+							tapper numPriseMurale correctement.</p>
+
+					</div>
+					<div class="form-group col-xs-3">
+						<label class="control-label" for="ecran">notes </label> <input
+							type="number" name="notes" class="form-group"
+							placeholder=" notes" ng-model="vm.logiciel.notes"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.notes.$invalid && myform.notes.$touched">
+							tapper notes correctement.</p>
+					</div>
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Dates</legend>
+				<div class="row">
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="ecran">date mise en
+							service </label> <input type="date" name="dateMiseEnService"
+							max="{{vm.dateV.currentDate | date: 'yyyy-MM-dd'}}"
+							placeholder=" dateMiseEnService"
+							ng-model="vm.logiciel.dateMiseEnService" ng-required="true">
+
+						<p class="error validationerror"
+							ng-show="myform.dateMiseEnService.$invalid && myform.dateMiseEnService.$touched">
+							tapper dateMiseEnService correctement.</p>
+					</div>
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="ecran">date livraison </label> <input
+							type="date" name="dateLivraison"
+							max="{{vm.dateV.currentDate | date: 'yyyy-MM-dd'}}"
+							placeholder=" dateLivraison" ng-model="vm.logiciel.dateLivraison"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.dateLivraison.$invalid && myform.dateLivraison.$touched">
+							tapper dateLivraison correctement.</p>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</fieldset>
+
+
+
+
+
+
+			<fieldset>
+				<legend>Reference</legend>
+
+
+
+
+				<div class="row">
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="fournisseurP">Fournisseur
+						</label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.fournisseur.numF" id="fournisseurP"
+								data-ng-options="typ.numF as typ.nomF for typ in vm.four"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.fournisseurP.$invalid && myform.fournisseurP.$touched">
+							taper fournisseur Perpherique .</p>
+					</div>
+
+
+
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="GarentieP">Type Garentie
+						</label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.garantie.numGarentie"
+								id="GarentieP"
+								data-ng-options="gara.numGarentie as gara.typeGarentie for gara in vm.gar"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.GarentieP.$invalid && myform.GarentieP.$touched">
+							taper etat garentie du machine .</p>
+					</div>
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="GarentieP">Disque Dur </label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.ddur.numDD" id="GarentieP"
+								data-ng-options="ddura.numDD as ddura.typeDD for ddura in vm.ddur"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.GarentieP.$invalid && myform.GarentieP.$touched">
+							selectionner type disuqe dur du machine .</p>
+					</div>
+
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="carteV">carte Video </label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.carteVideo.numCarteVideo"
+								id="carteV"
+								data-ng-options="carte.numCarteVideo as carte.nomCarte for carte in vm.carteV"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.carteV.$invalid && myform.carteV.$touched">
+							selectionner nom carte Mere du machine .</p>
+					</div>
+
+
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="maintz">Maintenance </label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.maintenance.numMaintenance"
+								id="maintz"
+								data-ng-options="ma.numMaintenance as ma.commentaire for ma in vm.maints"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.maintz.$invalid && myform.maintz.$touched">
+							selectionner date du maintenance.</p>
+					</div>
+
+
+
+
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="empl">Emplacement </label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.emplacements.numEmplacement"
+								id="empl"
+								data-ng-options="em.numEmplacement as em.nomEmplacement for em in vm.EMLPs"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.empl.$invalid && myform.empl.$touched">
+							selectionner nom du l'emplacement.</p>
+					</div>
+
+
+
+
+
+
+
+
+
+					<label class="control-label" for="marque">Marque </label>
+					<div>
+
+
+						<select ng-model="vm.logiciel.marque.numMarque" id="marque"
+							data-ng-options="ma.numMarque as ma.nomMarque for ma in vm.marqs"></select>
+
+					</div>
+
+					<p class="error validationerror"
+						ng-show="myform.marque.$invalid && myform.marque.$touched">
+						selectionner marque.</p>
+
+
+					<div class="form-group">
+						<label class="control-label" for="ecran">ecran </label>
+						<div>
+
+
+
+							<select ng-model="vm.logiciel.ecran.numEcran"
+								data-ng-options="ec.numEcran as ec.tailleEcran for ec in vm.ecrans"
+								ng-required="true"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.ecran.$invalid && myform.ecran.$touched">
+							selectionner Ecrans.</p>
+
+
+					</div>
+
+
+
+
+
+
+					<br> <br> <br>
+			</fieldset>
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+
+	</section>
+</div>

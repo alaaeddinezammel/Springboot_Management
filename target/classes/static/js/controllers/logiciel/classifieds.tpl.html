@@ -1,0 +1,70 @@
+	<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" type="button" ng-click="vm.addItem()" class="btn btn-sm btn-success">
+			<i class="glyphicon glyphicon-plus">
+			</i> ajouter logiciel
+		</button>
+<table st-table="vm.classifieds" class="table table-striped">
+		<thead>
+		<tr>
+				<th st-sort="firstName">Nom</th>
+				<th st-sort="lastName">Type</th>
+				<th st-sort="birthDate">Licence</th>
+				<th st-sort="balance">Version</th>
+				<th st-sort="birthDate">Editeur</th>
+				<th st-sort="balance">Numero serie</th>
+				<th st-sort="birthDate">Date d'installation</th>
+				<th st-sort="birthDate">Historique</th>
+		</tr>
+		<tr>
+			
+			<th colspan="4">
+				<input st-search placeholder="recherche globale" class="input-sm form-control"  ng-model="searchName" type="search"/>
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr dir-paginate="row in vm.classifieds|filter:searchName|itemsPerPage:5">
+			
+				<td>{{row.nomL}}</td>
+				<td>{{row.typeL}}</td>
+				<td>{{row.licenceL}}</td>
+				
+				<td>{{row.versionL}}</td>
+				
+				<td>{{row.editeurL}}</td>
+				<td>{{row.numSerl}}</td>
+				<td>{{row.dateL| date:"MM/dd/yyyy 'at' h:mma"}}</td>
+				
+					<td>
+				
+				<button ng-click="vm.Historique(row)" type="button" class="btn btn-sm btn-info">
+					<i class="glyphicon glyphicon-new-window">
+					</i> Historique
+				</button>
+				</td>
+				
+				
+				
+				
+				<td>
+				<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" ng-click="vm.EditLog(row)" type="button" class="btn btn-sm btn-primary">
+					<i class="glyphicon glyphicon-edit"> 
+					</i> Modifier
+				</button>
+				</td>
+				
+				
+				
+				
+				<td>
+				<button ng-disabled="vm.loggedU.data.roles=='ROLE_DIRECTION'" ng-click="vm.deleteLog(row.numL)" type="button" class="btn btn-sm btn-danger">
+					<i class="glyphicon glyphicon-remove-circle">
+					</i>
+				</button>
+				</td>
+				
+				
+			</tr>
+		</tbody>
+	</table>
+	<dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"> </dir-pagination-controls>
+	

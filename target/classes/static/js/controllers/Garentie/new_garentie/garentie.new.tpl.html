@@ -1,0 +1,56 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.postLogiciel(vm.logiciel)"
+			novalidate>
+
+			<div class="textintro">
+				<h2>Nouveau Garentie</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+
+				<label class="control-label" for="ecran">type garentie </label> <input
+					type="text" name="typeGarentie" class="form-group"
+					placeholder="typeGarentie" ng-model="vm.logiciel.typeGarentie"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.typeGarentie.$invalid && myform.typeGarentie.$touched">
+					taper type Garentie.</p>
+
+
+
+				<label class="control-label" for="ecran">duree garentie </label><input
+					type="number" name="dureeGarentie" class="form-group"
+					placeholder="dureeGarentie" ng-model="vm.logiciel.dureeGarentie"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.dureeGarentie.$invalid && myform.dureeGarentie.$touched">
+					taper type Garentie.</p>
+
+				<label class="control-label" for="ecran">Date debut garentie</label><br>
+				
+				 <input  type="date" name="dateL"
+					min="{{vm.dateV.currentDate | date: 'yyyy-MM-dd'}}"
+					placeholder="date debut garentie"
+					ng-model="vm.logiciel.dateDebutGarentie" ng-required="true">
+				<br> <br>
+				<p class="error validationerror"
+					ng-show="myform.dateDebutGarentie.$invalid && myform.dateDebutGarentie.$touched">
+					tapper date correctement.</p>
+
+
+			</fieldset>
+
+
+
+
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+
+	</section>
+</div>

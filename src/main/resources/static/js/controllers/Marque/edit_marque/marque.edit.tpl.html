@@ -1,0 +1,35 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.PUTLogiciel(vm.logiciel)" novalidate>
+
+			<div class="textintro">
+				<h2>Modifier Marque</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+
+				<label class="control-label" for="GarentieP">nom marque </label> <input
+					type="text" name="nomMarque" class="form-group"
+					placeholder="nomMarque" ng-model="vm.logiciel.nomMarque"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.nomMarque.$invalid && myform.nomMarque.$touched">
+					taper nom Marque.</p>
+
+
+
+
+
+			</fieldset>
+
+
+
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+	</section>
+</div>

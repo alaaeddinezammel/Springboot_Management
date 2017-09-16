@@ -1,0 +1,60 @@
+<div class="page">
+  <section class="card register">
+  <form name="myform"
+    ng-submit="vm.postLogiciel(vm.logiciel)"
+    novalidate>
+
+    <div class="textintro">
+      <h2>Nouveau Fournisseur</h2>
+      
+     
+    </div>
+
+    <fieldset>
+        <legend class="pull-left"> Information Basic</legend>
+     
+		<label class="control-label" for="ecran">nom fournisseur </label>
+      <input type="text" name="nomF" class="form-group"
+        placeholder="nom fournisseur.." 
+        ng-model="vm.logiciel.nomF"
+        ng-required="true">
+        <p class="error validationerror" ng-show="myform.nomF.$invalid && myform.nomF.$touched">
+        taper nom fournisseur correctement.</p>
+
+		<label class="control-label" for="ecran">adresse fournisseur </label>
+      <input type="text" name="adrF" class="form-group"
+        placeholder="adress  forunisseur" 
+        ng-model="vm.logiciel.adrF"
+        ng-required="true">
+        <p class="error validationerror" ng-show="myform.adrF.$invalid && myform.adrF.$touched">
+          tapper adress fournisseur correctement.</p>
+       
+
+
+		<label class="control-label" for="ecran">code fournisseur </label>
+      <input type="number" name="codepF" class="form-group" min="0"
+        placeholder="code logiciel  " 
+        ng-model="vm.logiciel.codepF"
+        ng-required="true">
+        <p class="error validationerror" ng-show="myform.codepF.$invalid && myform.codepF.$touched">
+        tapper code fournisseur correctement.</p>
+   
+     		<label class="control-label" for="ecran">numero telephone </label>
+        <input  type="number" name="telF" class="form-group" min="0"
+        placeholder=" telephone du forunisseur ..  " 
+        ng-model="vm.logiciel.telF"
+        ng-required="true">
+        <p  class="error validationerror" ng-show="myform.telF.$invalid && myform.telF.$touched">
+        tapper telephone correctement...</p>
+            </fieldset>
+        
+
+    
+
+
+    <button type="submit" class="btn">Envoyer</button>  
+    <button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+  </form>
+ 
+</section>
+</div>

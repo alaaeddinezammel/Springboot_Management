@@ -1,0 +1,40 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.PUTLogiciel(vm.logiciel)" novalidate>
+
+			<div class="textintro">
+				<h2>Modifier Fournisseur</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+
+
+
+				<label class="control-label" for="ecran">adresse fournisseur
+				</label> <input type="text" name="adrF" class="form-group"
+					placeholder="adress  forunisseur" ng-model="vm.logiciel.adrF"
+					ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.adrF.$invalid && myform.adrF.$touched">tapper
+					adress fournisseur correctement.</p>
+
+
+
+				<label class="control-label" for="ecran">numero telephone </label> <input
+					type="number" name="telF" class="form-group" min="0"
+					placeholder=" telephone du forunisseur ..  "
+					ng-model="vm.logiciel.telF" ng-required="true">
+				<p class="error validationerror"
+					ng-show="myform.telF.$invalid && myform.telF.$touched">tapper
+					telephone correctement...</p>
+			</fieldset>
+
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+	</section>
+</div>

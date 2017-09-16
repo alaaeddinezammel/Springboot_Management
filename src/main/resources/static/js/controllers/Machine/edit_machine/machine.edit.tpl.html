@@ -1,0 +1,189 @@
+<div class="page">
+	<section class="card register">
+		<form name="myform" ng-submit="vm.PUTLogiciel(vm.logiciel)" novalidate>
+
+			<div class="textintro">
+				<h2>Modifier Machine</h2>
+
+
+			</div>
+
+			<fieldset>
+				<legend class="pull-left"> Information Basic</legend>
+				<div class="row">
+
+
+
+
+				
+					<div class="form-group col-xs-6">
+
+						<label class="control-label" for="ecran">Processeur </label> <input
+							type="text" name="proc" class="form-group" min="0"
+							placeholder="proc" ng-model="vm.logiciel.proc" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.proc.$invalid && myform.procl.$touched">tapper
+							etat correctement.</p>
+					</div>
+
+
+
+
+
+
+				
+				
+
+				
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="ecran"> Carte reseaux </label> <input
+							type="text" name="carteReseaux" class="form-group"
+							placeholder=" carteReseaux eg:9999-999-999 "
+							ng-model="vm.logiciel.carteReseaux" ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.carteReseaux.$invalid && myform.carteReseaux.$touched">
+							tapper carteReseaux correctement.</p>
+
+</div>
+					</div>
+					
+					<div class="row">
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="ecran">Carte son </label> <input
+							type="text" name="carteSon" class="form-group"
+							placeholder=" carteSon " ng-model="vm.logiciel.carteSon"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.carteSon.$invalid && myform.carteSon.$touched">
+							tapper carteSon correctement.</p>
+
+					</div>
+
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="ecran">Adresse IP </label> <input
+							type="text" name="adressIp" class="form-group"
+							placeholder=" adressIp  " ng-model="vm.logiciel.adressIp"
+							ng-required="true">
+						<p class="error validationerror"
+							ng-show="myform.adressIp.$invalid && myform.adressIp.$touched">
+							tapper adressIp correctement.</p>
+
+
+
+
+					</div></div>
+			</fieldset>
+
+
+
+
+
+
+
+			<fieldset>
+				<legend>Reference</legend>
+
+
+
+
+				<div class="row">
+
+
+
+
+
+
+
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="GarentieP">Disque Dur </label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.ddur.numDD" id="GarentieP"
+								data-ng-options="ddura.numDD as ddura.typeDD for ddura in vm.ddur"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.GarentieP.$invalid && myform.GarentieP.$touched">
+							selectionner type disuqe dur du machine .</p>
+					</div>
+
+
+
+					<div class="form-group col-xs-6">
+						<label class="control-label" for="carteV">carte Video </label>
+						<div>
+
+
+							<select ng-model="vm.logiciel.carteVideo.numCarteVideo"
+								id="carteV"
+								data-ng-options="carte.numCarteVideo as carte.nomCarte for carte in vm.carteV"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.carteV.$invalid && myform.carteV.$touched">
+							selectionner nom carte Mere du machine .</p>
+					</div>
+
+
+					<div class="row">
+
+
+					
+
+
+
+
+
+
+					
+
+
+
+
+
+					</div>
+
+
+
+
+
+					<div class="form-group">
+						<label class="control-label" for="ecran">ecran </label>
+						<div>
+
+
+
+							<select ng-model="vm.logiciel.ecran.numEcran"
+								data-ng-options="ec.numEcran as ec.tailleEcran for ec in vm.ecrans"
+								ng-required="true"></select>
+
+						</div>
+
+						<p class="error validationerror"
+							ng-show="myform.ecran.$invalid && myform.ecran.$touched">
+							selectionner Ecrans.</p>
+
+
+					</div>
+
+
+
+
+
+
+
+					<br> <br> <br>
+			</fieldset>
+
+			<button type="submit" class="btn">Envoyer</button>
+			<button type="reset" ng-click="vm.cancelform()" class="btn">Annuler</button>
+		</form>
+	</section>
+</div>
